@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>WebToLead</title>
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<style>
+		.mainDiv {
+			position: absolute;			
+			width: max-content;
+			height: max-content;
+			border-width: 1px;
+			border-radius: 20px;
+		}
+
+		.subDiv {
+			height: 100%;
+			padding: 20px;
+			box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+		}
+
+		label {
+			width: 100px;
+		}
+	</style>
+</header>
+
+<body>
+	<!--  ----------------------------------------------------------------------  -->
+	<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+	<!--  If necessary, please modify the charset parameter to specify the        -->
+	<!--  character set of your HTML page.                                        -->
+	<!--  ----------------------------------------------------------------------  -->
+
+	<!--  ----------------------------------------------------------------------  -->
+	<!--  NOTE: Please add the following <FORM> element to your page.             -->
+	<!--  ----------------------------------------------------------------------  -->
+	<div class="p-5 position-relative">
+		<img src="https://consleague.com/wp-content/uploads/2020/04/Consleague_Logo_RGB.png" class="img-fluid mx-auto d-block" alt="" style="max-width: 30%; height: auto;">
+	</div>
+	<div class="position-relative mx-auto d-block align-content-center justify-content-center rounded-3 mainDiv">
+		<div class="justify-content-center subDiv">
+			<div class="header pb-4 h4 fw-bold justify-content-center text-center">
+				New Lead
+			</div>
+			<div class="body">
+				<div class="container-fluid">
+					<div class="container"">
+						<form class=" row g-3 align-content-center justify-content-center" align="center"
+						action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+						<input type="hidden" name="oid" value="00D5j000009mry5">
+						<input type="hidden" name="retURL"
+							value="https://consleagueconsultingpvtl-1e-dev-ed--c.visualforce.com/apex/ThankYou">
+
+						<!--  ----------------------------------------------------------------------  -->
+						<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+						<!--  these lines if you wish to test in debug mode.                          -->
+						<!--  <input type="hidden" name="debug" value=1>                              -->
+						<!--  <input type="hidden" name="debugEmail"                                  -->
+						<!--  value="avishiktachakraborty190@gmail.com">                              -->
+						<!--  ----------------------------------------------------------------------  -->
+
+						<div class="col-md-5">
+							<label for="salutation">Salutation</label>
+							<select id="salutation" name="salutation">
+								<option value="">--None--</option>
+								<option value="Mr.">Mr.</option>
+								<option value="Ms.">Ms.</option>
+								<option value="Mrs.">Mrs.</option>
+								<option value="Dr.">Dr.</option>
+								<option value="Prof.">Prof.</option>
+							</select>
+						</div>
+
+						<div class="col-md-5">							
+							<label for="first_name"><font style="color:red">*</font>First Name</label>
+							<input required id="first_name" maxlength="40" name="first_name" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="last_name"><font style="color:red">*</font>Last Name</label>
+							<input required id="last_name" maxlength="80" name="last_name" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="phone">Phone</label>
+							<input id="phone" maxlength="40" name="phone" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="email"><font style="color:red">*</font>Email</label>
+							<input required id="email" maxlength="80" name="email" type="text" />
+						</div>
+						<div class="col-md-5">
+							<label for="company"><font style="color:red">*</font>Company</label>
+							<input required id="company" maxlength="40" name="company" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="country">Country</label>
+							<input id="country" maxlength="40" name="country" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="state">State/Province</label>
+							<input id="state" maxlength="20" name="state" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="city">City</label>
+							<input id="city" maxlength="40" name="city" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="zip">Zip</label>
+							<input id="zip" maxlength="20" name="zip" type="text" />
+						</div>
+
+						<div class="col-md-5">
+							<label for="street">Street</label>
+							<textarea name="street"></textarea>
+						</div>
+
+						<div align="center mt-2">
+							<input class="btn btn-primary" type="submit" name="submit" />
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
