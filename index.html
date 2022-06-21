@@ -10,7 +10,7 @@
 		crossorigin="anonymous"></script>
 	<style>
 		.mainDiv {
-			position: absolute;			
+			position: absolute;
 			width: max-content;
 			height: max-content;
 			border-width: 1px;
@@ -40,7 +40,8 @@
 	<!--  NOTE: Please add the following <FORM> element to your page.             -->
 	<!--  ----------------------------------------------------------------------  -->
 	<div class="p-5 position-relative">
-		<img src="https://consleague.com/wp-content/uploads/2020/04/Consleague_Logo_RGB.png" class="img-fluid mx-auto d-block" alt="" style="max-width: 30%; height: auto;">
+		<img src="https://consleague.com/wp-content/uploads/2020/04/Consleague_Logo_RGB.png"
+			class="img-fluid mx-auto d-block" alt="" style="max-width: 30%; height: auto;">
 	</div>
 	<div class="position-relative mx-auto d-block align-content-center justify-content-center rounded-3 mainDiv">
 		<div class="justify-content-center subDiv">
@@ -51,10 +52,11 @@
 				<div class="container-fluid">
 					<div class="container"">
 						<form class=" row g-3 align-content-center justify-content-center" align="center"
-						action="ThankYou.html" method="POST">
-						<input type="hidden" name="oid" value="00D5j000009mry5">
-						<input type="hidden" name="retURL"
-							value="https://consleagueconsultingpvtl-1e-dev-ed--c.visualforce.com/apex/ThankYou">
+						action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+						<input type=hidden name="oid" value="00D5j000009mry5">
+						<input type=hidden name="retURL" value="https://avishiktaccl.github.io/Web_To_Lead.github.io/ThankYou.html">
+
 
 						<!--  ----------------------------------------------------------------------  -->
 						<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
@@ -76,13 +78,17 @@
 							</select>
 						</div>
 
-						<div class="col-md-5">							
-							<label for="first_name"><font style="color:red">*</font>First Name</label>
+						<div class="col-md-5">
+							<label for="first_name">
+								<font style="color:red">*</font>First Name
+							</label>
 							<input required id="first_name" maxlength="40" name="first_name" type="text" />
 						</div>
 
 						<div class="col-md-5">
-							<label for="last_name"><font style="color:red">*</font>Last Name</label>
+							<label for="last_name">
+								<font style="color:red">*</font>Last Name
+							</label>
 							<input required id="last_name" maxlength="80" name="last_name" type="text" />
 						</div>
 
@@ -92,11 +98,15 @@
 						</div>
 
 						<div class="col-md-5">
-							<label for="email"><font style="color:red">*</font>Email</label>
+							<label for="email">
+								<font style="color:red">*</font>Email
+							</label>
 							<input required id="email" maxlength="80" name="email" type="text" />
 						</div>
 						<div class="col-md-5">
-							<label for="company"><font style="color:red">*</font>Company</label>
+							<label for="company">
+								<font style="color:red">*</font>Company
+							</label>
 							<input required id="company" maxlength="40" name="company" type="text" />
 						</div>
 
